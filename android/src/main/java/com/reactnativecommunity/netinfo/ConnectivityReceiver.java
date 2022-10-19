@@ -205,26 +205,26 @@ public abstract class ConnectivityReceiver {
                     WifiInfo wifiInfo = mWifiManager.getConnectionInfo();
                     if (wifiInfo != null) {
                         // Get the SSID
-                        try {
-                            String initialSSID = wifiInfo.getSSID();
-                            if (initialSSID != null && !initialSSID.contains("<unknown ssid>")) {
-                                // Strip the quotes, if any
-                                String ssid = initialSSID.replace("\"", "");
-                                details.putString("ssid", ssid);
-                            }
-                        } catch (Exception e) {
-                            // Ignore errors
-                        }
+                        // try {
+                        //     String initialSSID = wifiInfo.getSSID();
+                        //     if (initialSSID != null && !initialSSID.contains("<unknown ssid>")) {
+                        //         // Strip the quotes, if any
+                        //         String ssid = initialSSID.replace("\"", "");
+                        //         details.putString("ssid", ssid);
+                        //     }
+                        // } catch (Exception e) {
+                        //     // Ignore errors
+                        // }
 
-                        // Get the BSSID
-                        try {
-                            String bssid = wifiInfo.getBSSID();
-                            if (bssid != null) {
-                                details.putString("bssid", bssid);
-                            }
-                        } catch (Exception e) {
-                            // Ignore errors
-                        }
+                        // // Get the BSSID
+                        // try {
+                        //     String bssid = wifiInfo.getBSSID();
+                        //     if (bssid != null) {
+                        //         details.putString("bssid", bssid);
+                        //     }
+                        // } catch (Exception e) {
+                        //     // Ignore errors
+                        // }
 
 
                         // Get/parse the wifi signal strength
